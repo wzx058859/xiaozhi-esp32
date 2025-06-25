@@ -145,9 +145,11 @@ choice BOARD_TYPE
     config BOARD_TYPE_ESP32S3_Touch_LCD_1_85C
         bool "Waveshare ESP32-S3-Touch-LCD-1.85C"
         depends on IDF_TARGET_ESP32S3
-    config BOARD_TYPE_ESP32S3_Touch_LCD_1_85
-        bool "Waveshare ESP32-S3-Touch-LCD-1.85"
+    config BOARD_TYPE_ESP32_S3_TOUCH_LCD_1_85
+        bool "ESP32-S3-Touch-LCD-1.85"
         depends on IDF_TARGET_ESP32S3
+        select LV_USE_GIF
+        select LV_GIF_CACHE_DECODE_DATA
     config BOARD_TYPE_ESP32S3_Touch_LCD_1_46
         bool "Waveshare ESP32-S3-Touch-LCD-1.46"
         depends on IDF_TARGET_ESP32S3
